@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">DipanggilDokter</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="title_activity_register">RegisterActivity</string>
+    <string-array name="roles_array">
+        <item>Pesakitan</item>
+        <item>Dokter</item>
+        <item>Driver Gojek</item>
+    </string-array>
+    <string name="title_activity_doctor">DoctorActivity</string>
+    <string name="title_activity_ambulans">AmbulansActivity</string>
+    <string name="title_activity_apotek">ApotekActivity</string>
+    <string name="title_activity_doctor_detail">DoctorDetailActivity</string>
+</resources>
