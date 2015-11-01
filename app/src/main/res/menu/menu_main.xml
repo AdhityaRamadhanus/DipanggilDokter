@@ -7,19 +7,19 @@
         android:id="@+id/action_doctor"
         android:orderInCategory="150"
         android:title="Dokter"
-        android:icon="@mipmap/ic_doctor"
+        android:icon="@mipmap/ic_logodokter"
         app:showAsAction="always">
     </item>
     <item
         android:id="@+id/action_call"
         android:orderInCategory="200"
         android:title="Ambulans"
-        android:icon="@mipmap/ic_call"
+        android:icon="@mipmap/ic_logoambulans"
         app:showAsAction="always" />
     <item
         android:id="@+id/action_apotek"
         android:orderInCategory="250"
         android:title="Apotek"
-        android:icon="@mipmap/ic_apotek"
+        android:icon="@mipmap/ic_logoapotek"
         app:showAsAction="always" />
 </menu>

@@ -1,19 +1,16 @@
 package rageagainstmachinelearning.dipanggildokter.Beans;
 
-import com.google.android.gms.maps.model.LatLng;
-
-import java.io.Serializable;
-
 /**
- * Created by nao on 10/7/15.
+ * Created by nao on 10/9/15.
  */
-public class Doctor implements Serializable{
-    private String Nama,Alamat,Kontak, image;
+public class Apotek {
+    String Nama,Kontak,Alamat;
     Double Distance;
-    public Doctor(String N,String A,String K){
+    public Apotek(String N,String K,String A, Double distance){
         Nama=N;
-        Alamat=A;
         Kontak=K;
+        Alamat=A;
+        Distance = distance;
     }
 
     public Double getDistance() {
@@ -24,10 +21,6 @@ public class Doctor implements Serializable{
         Distance = distance;
     }
 
-    public String getAlamat() {
-        return Alamat;
-    }
-
     public String getKontak() {
         return Kontak;
     }
@@ -36,23 +29,19 @@ public class Doctor implements Serializable{
         return Nama;
     }
 
-    public String getImage(){
-        return this.image;
+    public String getAlamat() {
+        return Alamat;
     }
 
     public void setAlamat(String alamat) {
         Alamat = alamat;
     }
 
-    public void setKontak(String kontak) {
-        Kontak = kontak;
-    }
-
     public void setNama(String nama) {
         Nama = nama;
     }
 
-    public void setImage(String image){
-        this.image = image;
+    public void setKontak(String kontak) {
+        Kontak = kontak;
     }
 }

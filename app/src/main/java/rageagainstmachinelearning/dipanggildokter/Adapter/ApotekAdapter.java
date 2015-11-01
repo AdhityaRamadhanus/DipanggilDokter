@@ -8,50 +8,52 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import java.util.ArrayList;
 
-import rageagainstmachinelearning.dipanggildokter.Beans.Ambulans;
-import rageagainstmachinelearning.dipanggildokter.Beans.Doctor;
+import rageagainstmachinelearning.dipanggildokter.Beans.Apotek;
 import rageagainstmachinelearning.dipanggildokter.R;
 
-public class AmbulansAdapter extends ArrayAdapter<Ambulans> {
+/**
+ * Created by nao on 10/9/15.
+ */
+public class ApotekAdapter extends ArrayAdapter<Apotek> {
     Context context;
     int layoutResourceId;
-    ArrayList<Ambulans> AmbulansList;
-    public AmbulansAdapter(Context context,int Resource, int ResourceTextId,ArrayList<Ambulans> data) {
+    ArrayList<Apotek> ApotekList;
+    public ApotekAdapter(Context context,int Resource, int ResourceTextId,ArrayList<Apotek> data) {
         super(context, Resource,ResourceTextId, data);
         this.layoutResourceId = Resource;
         this.context = context;
-        this.AmbulansList = data;
+        this.ApotekList = data;
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View row = convertView;
-        AmbulansHolder holder = null;
+        ApotekHolder holder = null;
         if(row == null) {
             LayoutInflater inflater = ((Activity)context).getLayoutInflater();
             row = inflater.inflate(layoutResourceId, parent, false);
-            holder = new AmbulansHolder();
+            holder = new ApotekHolder();
             holder.imgIcon = (ImageView)row.findViewById(R.id.icon);
             holder.FirstLine = (TextView)row.findViewById(R.id.firstLine);
             holder.SecondLine = (TextView) row.findViewById(R.id.secondLine);
             row.setTag(holder);
         }
         else {
-            holder = (AmbulansHolder)row.getTag();
+            holder = (ApotekHolder)row.getTag();
         }
 
-        Ambulans ambulans = AmbulansList.get(position);
-        holder.FirstLine.setText(ambulans.getNama());
-        holder.SecondLine.setText(Math.round(Double.parseDouble(ambulans.getKontak()))+" Km");
+        Apotek apotek = ApotekList.get(position);
+        holder.FirstLine.setText(apotek.getNama()+" , "+apotek.getKontak());
+        holder.SecondLine.setText(apotek.getAlamat());
         return row;
     }
 
-    static class AmbulansHolder {
+    static class ApotekHolder {
         ImageView imgIcon;
         TextView FirstLine;
         TextView SecondLine;
     }
 }
-

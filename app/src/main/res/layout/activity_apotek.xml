@@ -8,5 +8,18 @@
         android:id="@+id/tool_bar"
         layout="@layout/tool_bar"
         ></include>
-
+    <ListView
+        android:layout_below="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/list_apotek"
+        android:layout_centerHorizontal="true" />
+    <TextView
+        android:id="@+id/empty"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Loading... Please Wait"
+        android:textSize="20dip" />
 </RelativeLayout>

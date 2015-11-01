@@ -14,4 +14,12 @@
         android:layout_height="wrap_content"
         android:id="@+id/list_ambulans"
         android:layout_centerHorizontal="true" />
+    <TextView
+        android:id="@+id/empty"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Loading... Please Wait"
+        android:textSize="20dip" />
 </RelativeLayout>
